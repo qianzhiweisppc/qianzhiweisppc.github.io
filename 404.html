@@ -1,25 +1,16 @@
 ---
 layout: default
-description: "你来到了没有知识的荒原 🙊"
-header-img: "img/404-bg.jpg"
+title: 404
+icon: frown
 permalink: /404.html
+sitemap: false
+active_key: error
 ---
 
-
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<div class="site-heading" id="tag-heading">
-					<h1>404</h1>
-					<span class="subheading">{{ page.description }}</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-<script>
-	document.body.classList.add('page-fullscreen');
-</script>
+<div class="ui vertical stripe segment">
+    <div class="ui center aligned text container">
+        <h1 class="ui error header">404</h1>
+        <h2>啊咧？页面不存在喏！(>_<)</h2>
+        <a class="ui basic button" href="{{ '/' | relative_url }}"><i class="arrow left icon"></i>回到首页</a>
+    </div>
+</div>
