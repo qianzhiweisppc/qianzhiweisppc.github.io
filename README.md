@@ -120,3 +120,35 @@ cd qianzhiweisppc.github.io
 ```sh
 bundle exec jekyll serve -H 0.0.0.0 -P 4000 --detach
 ```
+
+
+备用
+centOS下进程的后台运行、查看进程、结束进程
+
+1、查看进程
+
+#ps -aux | grep nginx*
+
+上述命令表示查看nginx相关的进程
+
+2、杀死进程
+
+#kill -9 7819
+
+上述命令表示杀死pid为7819的进程
+
+-----------------------------------------------------------------------------------------------------
+
+netstat -lntp    #查看监听(Listen)的端口
+
+netstat -antp   #查看所有建立的TCP连接
+
+netstat -tulpn  #查看所有运行中的服务的详细信息
+
+ps -ef              #查看所有进程
+
+ps -aux           #查看使用内存的进程
+
+top                  #查看内存使用说明 (shift+m 按照排名)
+
+kill -pid  #结束进程：
