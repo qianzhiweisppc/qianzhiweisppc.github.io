@@ -76,22 +76,28 @@ git clone https://github.com/qianzhiweisppc/qianzhiweisppc.github.io
 ```
 
 4. Change into the project directory.
-服务器重启后需重启运行命令
 ```sh
 cd qianzhiweisppc.github.io
 ```
 
 5. Install required gems in the `Gemfile` using Bundler.
-服务器重启后需重启运行命令
 ```sh
 bundle install
 ```
 
 6. Build the site and make it available on a local server.
-服务器重启后需重启运行命令
 ```sh
 bundle exec jekyll serve
 ```
 
 7. Now browse to [http://localhost:4000][localhost-4000].
+
+8. 服务器重启后需重启运行命令
+
+```sh
+cd qianzhiweisppc.github.io
+```
+
+```sh
+bundle exec jekyll serve
 
