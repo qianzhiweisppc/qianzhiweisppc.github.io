@@ -18,6 +18,7 @@ curl -sSL https://get.rvm.io | bash -s stable
 source /etc/profile.d/rvm.sh
 ```
 
+检查RVM是否安装正确
 ```sh
 rvm -v
 ```
@@ -34,6 +35,13 @@ rvm list known
 rvm install 2.6.3
 ```
 
+设置 Ruby 版本
+RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本
+```sh
+rvm 2.6.3 --default
+```
+
+
 rvm 常用命令
 
 查询已经安装的 ruby
@@ -44,12 +52,6 @@ rvm list
 卸载一个已安装版本
 ```sh
 rvm remove 1.9.2
-```
-
-设置 Ruby 版本
-RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本
-```sh
-rvm 2.6.3 --default
 ```
 
 检查版本是否安全正确
@@ -86,7 +88,7 @@ bundle install
 ```
 
 6. Build the site and make it available on a local server.
-
+服务器重启后需重启运行命令
 ```sh
 bundle exec jekyll serve
 ```
