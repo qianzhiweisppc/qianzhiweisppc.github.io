@@ -23,6 +23,7 @@ source /etc/profile.d/rvm.sh
 rvm -v
 ```
 
+
 1.2用 RVM 安装 Ruby 环境
 
 列出已知的 ruby 版本:
@@ -63,11 +64,13 @@ ruby -v
 gem -v
 ```
 
+
 2. Install Jekyll and [bundler][jekyll-ruby-101-bundler] [gems][jekyll-ruby-101-gems].
 
 ```sh
 gem install jekyll bundler
 ```
+
 
 3. Clone the project from GitHub.
 
@@ -75,15 +78,18 @@ gem install jekyll bundler
 git clone https://github.com/qianzhiweisppc/qianzhiweisppc.github.io
 ```
 
+
 4. Change into the project directory.
 ```sh
 cd qianzhiweisppc.github.io
 ```
 
+
 5. Install required gems in the `Gemfile` using Bundler.
 ```sh
 bundle install
 ```
+
 
 6. Build the site and make it available on a local server.
 ```sh
@@ -101,7 +107,9 @@ bundle exec jekyll serve -H 0.0.0.0 -P 4000 --detach
 #调试时可不加后台运行参数，这样直接 Ctrl+C 就能关闭进程
 
 
+
 7. Now browse to [http://localhost:4000][localhost-4000].
+
 
 8. 服务器重启后需重启运行命令
 
