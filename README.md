@@ -1,34 +1,64 @@
-[![Build Status](https://travis-ci.org/BYR-Navi/BYR-Navi.svg)][travis-ci]
-[![Website](https://img.shields.io/website-up-down-green-red/https/byr-navi.com.svg)][website]
-[![License](https://img.shields.io/github/license/BYR-Navi/BYR-Navi.svg)][license]
-[![Last Commit](https://img.shields.io/github/last-commit/BYR-Navi/BYR-Navi.svg)][commit]
-[![Donate](https://img.shields.io/badge/Donate-Coffee-A5673F.svg)][donate]
 
-
-## :triangular_ruler: Design Philosophy
-This project is a [Jekyll][jekyll]-powered website, which is built based on [Fomantic UI][fomantic] web framework, and deployed **previously** using [GitHub Pages][github-pages] (while currently running on a [Linode][linode] VPS).
-
-The whole project is designed and built with high flexibility of configuration and customization.
-You can either configure it by modifying the `_config.yml` file or customize it by replacing the content of the `*.yml` files in the `_data` folder with your own data.
-
-## :book: A Tiny Tutorial
-There is **no easy way for beginners** without essential background knowledge.
-To be efficient, the best way to understand this project is to start with the Jekyll&rsquo;s [docs][jekyll-doc] and Fomantic UI&rsquo;s [docs][fomantic-doc].
-
-Before you start, you should have some basic understanding of the following:
-
-- HTML
-- CSS
-- JavaScript
-- jQuery
-- YAML format
-- Liquid (Template Engine)
-- Ruby
-- UNIX/Linux Shell Script
 
 ### Quick Start
 
-1. Install a full [Ruby development environment][jekyll-installation].
+1. 安装Ruby环境
+1.1 安装RVM
+
+```sh
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+```
+
+```sh
+curl -sSL https://get.rvm.io | bash -s stable
+```
+
+```sh
+source /etc/profile.d/rvm.sh
+```
+
+```sh
+rvm -v
+```
+
+1.2用 RVM 安装 Ruby 环境
+
+列出已知的 ruby 版本:
+```sh
+rvm list known
+```
+
+可以选择现有的 rvm 版本来进行安装
+```sh
+rvm install 2.6.
+```
+
+rvm 常用命令
+
+查询已经安装的 ruby
+```sh
+rvm list
+```
+
+卸载一个已安装版本
+```sh
+rvm remove 1.9.2
+```
+
+设置 Ruby 版本
+RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本
+```sh
+rvm 2.6.3 --default
+```
+
+检查版本是否安全正确
+```sh
+ruby -v
+```
+
+```sh
+gem -v
+```
 
 2. Install Jekyll and [bundler][jekyll-ruby-101-bundler] [gems][jekyll-ruby-101-gems].
 
