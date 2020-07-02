@@ -3,6 +3,7 @@
 ### Quick Start
 
 1. 安装Ruby环境
+
 1.1 安装RVM
 
 ```sh
