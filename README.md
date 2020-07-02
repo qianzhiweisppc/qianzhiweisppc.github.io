@@ -31,7 +31,7 @@ rvm list known
 
 可以选择现有的 rvm 版本来进行安装
 ```sh
-rvm install 2.6.
+rvm install 2.6.3
 ```
 
 rvm 常用命令
