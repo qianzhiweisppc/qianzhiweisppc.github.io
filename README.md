@@ -76,13 +76,13 @@ git clone https://github.com/qianzhiweisppc/qianzhiweisppc.github.io
 ```
 
 4. Change into the project directory.
-
+服务器重启后需重启运行命令
 ```sh
 cd qianzhiweisppc.github.io
 ```
 
 5. Install required gems in the `Gemfile` using Bundler.
-
+服务器重启后需重启运行命令
 ```sh
 bundle install
 ```
