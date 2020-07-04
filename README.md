@@ -121,6 +121,84 @@ cd qianzhiweisppc.github.io
 bundle exec jekyll serve -H 0.0.0.0 -P 4000 --detach
 ```
 
+9. 也可以直接把编译完成的_site文件夹内容放在网站根目录，直接访问，如果需要修改首页标题这类，可以编辑网站根目录下的_config.yml 文件，网址的话则是修改_data 目录下的 links.yml，还有各种页面相关信息也是修改此目录下其他文件即可。
+
+10. 前端库默认使用unpky.com，可以换成国内前端库，或者cdn.jsdelivr.net/npm/,国内有加速CDN
+
+11. 页面的今日访客和当前在线等统计数据需要显示的话，用docker安装 Matomo
+
+11.1 安装docker
+
+```sh
+#CentOS 6
+rpm -iUvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+yum update -y
+yum -y install docker-io
+service docker start
+chkconfig docker on
+
+#CentOS 7、Debian、Ubuntu
+curl -sSL https://get.docker.com/ | sh
+systemctl start docker
+systemctl enable docker
+```
+
+11.2 拉取matomo镜像和MySQL镜像（如果你服务器已经安装过Mysql数据库，可以跳过该步骤）
+
+```sh
+docker pull crazymax/matomo
+
+docker pull mysql:5.6 
+```
+
+11.3 创建matomo容器，把容器里 data 目录和 8000 端口映射出来：
+
+```sh
+docker run --restart=always -d --name matomo -p 8000:8000 -v /matomo/data:/data crazymax/matomo
+```
+
+11.4 创建 MySQL 容器，3306 端口和对应目录也映射出来，用户名/数据库名这类按自己需求修改（如果你服务器已经安装过Mysql数据库，可以跳过该步骤）
+
+```sh
+docker run --restart=always --name mysql -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=lishuma -e MYSQL_DATABASE=matomo -e MYSQL_USER=matomo -e MYSQL_PASSWORD=matomo -v /matomo/mysql:/var/lib/mysql mysql:5.6
+```
+
+11.5 防火墙放行 8000 和 3306 端口，然后访问 IP+8000 端口即可看到 Matomo 界面。
+
+11.6 一路下一步，数据库信息按照自己设定的填写即可，注意服务器地址填写外部物理机的 IP。
+
+11.7  网站地址直接写 IP 有个问题就是程序会提示不安全，需要修改/root/matomo/data/config/config.ini.php：
+
+```sh
+enable_trusted_host_check=0
+```
+
+或者
+修改trusted_hosts[]参数为你的访问地址
+
+11.8 配置该导航的话，需要修改配置文件_data/analytics.yml，大致参数如下：
+#url为matomo站点，domain为导航站，site_id为matomo站点统计站id，token为matomo站点的token
+
+```sh
+matomo:
+  url: http://matomo.qianzhiweisppc.com/
+  domains:
+  - "http://byr.qianzhiweisppc.com"
+  site_id: 1
+  token: 297bd600834c2a5a70293c47a
+```
+
+参数获取大致路径如下：
+
+```sh
+1、site_id
+在后台添加一个网站统计，就可以直接看到网站id
+2、token
+该参数可以在Settings里获取API Authentication Token
+```
+
+11.9 最后统计站的通用设置里还需要设置一下跨域资源共享，填上导航站的地址，保存退出即可：
+
 
 备用
 centOS下进程的后台运行、查看进程、结束进程
@@ -152,3 +230,7 @@ ps -aux           #查看使用内存的进程
 top                  #查看内存使用说明 (shift+m 按照排名)
 
 kill -pid  #结束进程：
+
+
+
+
