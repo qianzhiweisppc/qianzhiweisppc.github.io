@@ -65,21 +65,21 @@ gem -v
 ```
 
 
-2. Install Jekyll and [bundler][jekyll-ruby-101-bundler] [gems][jekyll-ruby-101-gems].
+2. 安装 Jekyll and [bundler] [jekyll-ruby-101-bundler] [gems][jekyll-ruby-101-gems].
 
 ```sh
 gem install jekyll bundler
 ```
 
 
-3. Clone the project from GitHub.
+3. Clone 项目 from GitHub
 
 ```sh
 git clone https://github.com/qianzhiweisppc/qianzhiweisppc.github.io
 ```
 
 
-4. Change into the project directory.
+4. 进入目录
 ```sh
 cd qianzhiweisppc.github.io
 ```
@@ -108,7 +108,7 @@ bundle exec jekyll serve -H 0.0.0.0 -P 4000 --detach
 
 
 
-7. Now browse to [http://localhost:4000][localhost-4000].
+7. 现场打开网页就可访问 http://localhost:4000
 
 
 8. 服务器重启后需重启运行命令
@@ -123,7 +123,7 @@ bundle exec jekyll serve -H 0.0.0.0 -P 4000 --detach
 
 9. 也可以直接把编译完成的_site文件夹内容放在网站根目录，直接访问，如果需要修改首页标题这类，可以编辑网站根目录下的_config.yml 文件，网址的话则是修改_data 目录下的 links.yml，还有各种页面相关信息也是修改此目录下其他文件即可。
 
-10. 前端库默认使用unpky.com，可以换成国内前端库，或者cdn.jsdelivr.net/npm/,国内有加速CDN
+10. 前端库默认使用unpkg.com，可以换成国内前端库，或者 cdn.jsdelivr.net/npm/ ,国内有加速CDN
 
 11. 页面的今日访客和当前在线等统计数据需要显示的话，用docker安装 Matomo
 
