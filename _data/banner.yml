@@ -1,6 +1,6 @@
 show: ture
-memorial: ture
-hitokoto: false
+memorial: false
+hitokoto: ture
 content: 端午安康
 detail: 阖家幸福
 color: green
