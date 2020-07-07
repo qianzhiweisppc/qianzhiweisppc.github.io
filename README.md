@@ -235,5 +235,10 @@ top                  #查看内存使用说明 (shift+m 按照排名)
 kill -pid  #结束进程：
 
 
+-----------------------------------------------------------------------------------------------------
 
+ICP备案代码
 
+```sh
+<div align=center><a href="http://beian.miit.gov.cn/"; target=_blank>沪ICP备xxxxxxxxx号</a></div>
+```
