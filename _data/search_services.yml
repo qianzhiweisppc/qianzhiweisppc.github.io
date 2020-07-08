@@ -212,7 +212,7 @@
   shortcut:
     icon: amazon yellow inverted
     style: black
-    show: false
+    show: true
 
 - id: dangdang
   name: 当当
@@ -220,7 +220,7 @@
   shortcut:
     icon: shopping basket red inverted
     style: black
-    show: false
+    show: true
 
 - id: music163
   name: 网易云音乐
@@ -268,4 +268,4 @@
   shortcut:
     icon: film blue inverted
     style: black
-    show: false
+    show: true
