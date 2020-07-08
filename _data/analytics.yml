@@ -5,5 +5,5 @@ matomo:
   url: https://matomo.166166.xyz/
   domains:
   - "19860320.xyz"
-  site_id: 1
-  token: &token_auth=8ac5a6fda4596533f54cb3e4588e906e
+  site_id: 2
+  token: 8ac5a6fda4596533f54cb3e4588e906e
